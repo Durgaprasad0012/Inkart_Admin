@@ -1,0 +1,66 @@
+import { StyleSheet } from "react-native";
+import { colors } from "../../Components/Common/color";
+
+export const style=(width, height, isProtrait)=>StyleSheet.create({
+    container:{
+        flex:1,
+        padding:10,
+        backgroundColor:colors.white
+    },
+    scrollView:{
+        width:'100%',
+        flexDirection:isProtrait?'column':'row',
+        flexWrap:isProtrait?'nowrap':'wrap',
+        alignItems:'center'
+    },
+    userBox:{
+        width:isProtrait?width*.9:width*.45,
+        height:isProtrait?height*.18:height*.25,
+        borderRadius:8,
+        backgroundColor:colors.lightGray,
+        alignSelf:'center',
+        flexDirection:'row',
+        alignItems:'center',
+        paddingHorizontal:10,
+        margin:5,
+        position:'relative'
+    },
+    profileImage:{
+        width:isProtrait?80:60,
+        height:isProtrait?80:60,
+        resizeMode:'contain',
+        borderRadius:50
+    },
+    contentView:{
+        marginLeft:15
+    },
+    headText:{
+        fontFamily:'Lato-Bold',
+        fontSize:isProtrait?18:16,
+        color:colors.black_level_3,
+        marginBottom:5
+    },
+    emailText:{
+        fontFamily:'Lato-Italic',
+        fontSize:isProtrait?16:14,
+        color:colors.primary,
+    },
+    contactText:{
+        fontFamily:'Lato-Regular',
+        fontSize:isProtrait?16:14,
+        color:colors.primary_green,
+    },
+    blockView:{
+        position:'absolute',
+        right:5,
+        top:5,
+        borderRadius:5
+    },
+    blockText:{
+        fontFamily:'Lato-Bold',
+        fontSize:isProtrait?16:14,
+        paddingHorizontal:10,
+        paddingVertical:5,
+        color:colors.white
+    }
+})
